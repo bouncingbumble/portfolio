@@ -1,0 +1,12 @@
+#hero {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("https://images.unsplash.com/photo-1480365334925-2aee561aa28e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bf8b1450278447b993bfc39dda6aabc&auto=format&fit=crop&w=773&q=80");
+    background-size: cover;
+    padding-left: 3%;
+    padding-right: 3%;
+    min-height: 600px;
+}

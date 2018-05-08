@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  letter-spacing: 1px;
+}
+
+h3 {
+  letter-spacing: 2px;
+  line-height: 1.3;
+}

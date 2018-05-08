@@ -1,7 +1,7 @@
 export class Portfolio {
   constructor(
     public gif: string,
-    public website: string,
+    public url: string,
     public description: string
   ){}
 }

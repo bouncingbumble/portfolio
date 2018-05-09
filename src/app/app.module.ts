@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PricingComponent } from './pricing/pricing.component';
 import { BlogComponent } from './blog/blog.component';
+import { JsonpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -37,12 +38,13 @@ const appRoutes: Routes = [
   ],
   imports: [
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      appRoutes
+      // { enableTracing: true } // <-- debugging purposes only
     ),
-    BrowserModule
+    BrowserModule,
+    JsonpModule
   ],
-  providers: [PortfolioService],
+  providers: [PortfolioService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

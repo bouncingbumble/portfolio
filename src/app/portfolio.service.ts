@@ -4,8 +4,6 @@ import { StitchClientFactory } from 'mongodb-stitch';
 import { Jsonp, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-let appId = 'yetistudio-bqpnl';
-
 @Injectable()
 export class PortfolioService {
 
@@ -15,27 +13,6 @@ export class PortfolioService {
   ];
 
   constructor(private jsonp: Jsonp) { }
-
-  mClient;
-
-  connect(){
-    this.mClient = StitchClientFactory.create(appId);  // Slitch apps > Clients > App ID
-    this.mClient.then(stitchClient => stitchClient.login())
-      .then((stitchClient) => console.log('logged in as: ' + stitchClient))
-      .catch(e => console.log('error: ', e));
-  }
-
-  // getPortfolios() {
-  //   this.connect();
-  //   return this.mClient.then(stitchClient => {
-  //     let db = stitchClient.service('mongodb', 'mongodb-atlas').db('portfolio'); // Slitch apps > mongodb-atlas > Name database.Collection
-  //     let itemsCollection = db.collection('portfolioItems'); // Slitch apps > mongodb-atlas > Name database.Collection
-  //     console.log(itemsCollection.find().execute());
-  //     return itemsCollection.find().execute();
-  //   })
-  //    .then(result => {return result})
-  //    .catch(e => console.log('error: ', e));
-  //  }
 
   getPortfolios(){
     let clientPromise = StitchClientFactory.create('yetistudio-bqpnl');

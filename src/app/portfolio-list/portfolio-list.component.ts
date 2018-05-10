@@ -9,11 +9,17 @@ import { PortfolioService } from '../portfolio.service';
 })
 export class PortfolioListComponent implements OnInit {
 
-  @Input() portfolios: Portfolio[];
-  constructor(private portfolioService: PortfolioService) { }
+  @Input() portfolios;
+  constructor(private portfolioService: PortfolioService) {
+  }
 
   ngOnInit() {
-    this.portfolioService.getPortfolios();
+    this.portfolioService.get()
+      .then(result => {
+        this.portfolios = result;
+      }
+    );
+
   }
 
 }
